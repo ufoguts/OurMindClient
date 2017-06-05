@@ -1,51 +1,51 @@
 #pragma once
 
 
-// EditMindDlg å¯¹è¯æ¡†
+// EditMindDlg ¶Ô»°¿ò
 
 /*
-ä¸»çº¿ç¨‹ï¼š
-å“åº”æ¶ˆæ¯ï¼Œ
-ä¸»ç”¨æˆ·ç¼–è¾‘æ€ç»´å¯¼å›¾åˆ†ä¸ºä¸¤ç§æƒ…å†µï¼Œç«‹å³ä¸Šä¼ å½¢å’Œå»¶è¿Ÿä¸Šä¼ å½¢
-ç«‹å³ä¸Šä¼ æå‡ºç½‘ç»œç”³è¯·ï¼Œé˜»å¡ä¸»ç•Œé¢ï¼Œ
-å»¶è¿Ÿä¸Šä¼ å°†æ ‡å¿—ä½ç»™å®šæ—¶å™¨çº¿ç¨‹ï¼Œç­‰å¾…å®šæ—¶å™¨çº¿ç¨‹ä¸Šä¼ 
-åˆ†å—ç¼–è¾‘ä¸ºç”³è¯·å’Œé‡Šæ”¾ä¸¤æ­¥
-ç”³è¯·åˆ†å—æ—¶ï¼Œç”³è¯·åˆ†å—åŒæ—¶è¯·æ±‚æ›´æ–°
-æ³¨æ„æ­¤æ—¶ç”³è¯·çš„åˆ†å—å¯èƒ½ä¼šæ”¹å˜åˆ†å—å®šä½æ•°ç»„ï¼Œç”±æœåŠ¡å™¨æ“ä½œ
-è¿”å›çš„æ–°çš„åˆ†å—å®šä½æ•°ç»„ï¼Œä½¿ç”¨æ­¤è¿›è¡Œåˆ†å—ç¼–è¾‘
-ä¿å­˜åˆ†å—ç¼–è¾‘æŒ‡é’ˆï¼Œä½¿å¾—æ›´æ–°ç»“æ„ä¸ä¼šå½±å“ç¼–è¾‘
-é‡Šæ”¾åˆ†å—åŒç†ï¼Œé‡Šæ”¾åˆ†å—åŒæ—¶è¯·æ±‚æ›´æ–°
-æ”¹å˜å®šä½æ•°ç»„åŒä¸Š
-æ³¨æ„ä¸åœ¨æœ¬æœºç›´æ¥æ“ä½œåˆ†å—æ›´æ–°ï¼Œå¯èƒ½ä¼šå¤±è´¥æˆ–åœ¨å‰æ’å…¥å…¶ä»–å…³ç³»æ“ä½œ
-ç”±æœåŠ¡å™¨å†³å®šï¼Œæœ¬æœºåªéœ€å¤„ç†è¿”å›çš„æ“ä½œé“¾è¡¨å³å¯
-å…³ç³»æ“ä½œå¤„äºåˆ†å—ç”³è¯·é‡Šæ”¾ä¹‹é—´ï¼Œæ­¤æ—¶è¦æƒ³æœåŠ¡å™¨å‘é€è¯·æ±‚
-ä¹‹åä¹Ÿä¼šè¿”å›æ“ä½œé“¾è¡¨
-é€»è¾‘ç”±æœåŠ¡å™¨ç»´æŠ¤ï¼Œå®¢æˆ·ç«¯è¿›è¡Œæ“ä½œå³å¯
+Ö÷Ïß³Ì£º
+ÏìÓ¦ÏûÏ¢£¬
+Ö÷ÓÃ»§±à¼­Ë¼Î¬µ¼Í¼·ÖÎªÁ½ÖÖÇé¿ö£¬Á¢¼´ÉÏ´«ĞÎºÍÑÓ³ÙÉÏ´«ĞÎ
+Á¢¼´ÉÏ´«Ìá³öÍøÂçÉêÇë£¬×èÈûÖ÷½çÃæ£¬
+ÑÓ³ÙÉÏ´«½«±êÖ¾Î»¸ø¶¨Ê±Æ÷Ïß³Ì£¬µÈ´ı¶¨Ê±Æ÷Ïß³ÌÉÏ´«
+·Ö¿é±à¼­ÎªÉêÇëºÍÊÍ·ÅÁ½²½
+ÉêÇë·Ö¿éÊ±£¬ÉêÇë·Ö¿éÍ¬Ê±ÇëÇó¸üĞÂ
+×¢Òâ´ËÊ±ÉêÇëµÄ·Ö¿é¿ÉÄÜ»á¸Ä±ä·Ö¿é¶¨Î»Êı×é£¬ÓÉ·şÎñÆ÷²Ù×÷
+·µ»ØµÄĞÂµÄ·Ö¿é¶¨Î»Êı×é£¬Ê¹ÓÃ´Ë½øĞĞ·Ö¿é±à¼­
+±£´æ·Ö¿é±à¼­Ö¸Õë£¬Ê¹µÃ¸üĞÂ½á¹¹²»»áÓ°Ïì±à¼­
+ÊÍ·Å·Ö¿éÍ¬Àí£¬ÊÍ·Å·Ö¿éÍ¬Ê±ÇëÇó¸üĞÂ
+¸Ä±ä¶¨Î»Êı×éÍ¬ÉÏ
+×¢Òâ²»ÔÚ±¾»úÖ±½Ó²Ù×÷·Ö¿é¸üĞÂ£¬¿ÉÄÜ»áÊ§°Ü»òÔÚÇ°²åÈëÆäËû¹ØÏµ²Ù×÷
+ÓÉ·şÎñÆ÷¾ö¶¨£¬±¾»úÖ»Ğè´¦Àí·µ»ØµÄ²Ù×÷Á´±í¼´¿É
+¹ØÏµ²Ù×÷´¦ÓÚ·Ö¿éÉêÇëÊÍ·ÅÖ®¼ä£¬´ËÊ±ÒªÏë·şÎñÆ÷·¢ËÍÇëÇó
+Ö®ºóÒ²»á·µ»Ø²Ù×÷Á´±í
+Âß¼­ÓÉ·şÎñÆ÷Î¬»¤£¬¿Í»§¶Ë½øĞĞ²Ù×÷¼´¿É
 
-ç¬¬äºŒçº¿ç¨‹ï¼š
-æ—¶é’Ÿä¸­æ–­æ§åˆ¶0.2s
-å®šæ—¶å‘æœåŠ¡å™¨ç”³è¯·æ›´æ–°
-å¯¹äºä¸»ç”¨æˆ·ï¼Œå½“æ ‡å¿—ä½ç½®ä½æ—¶ä¸Šä¼ å¯¼å›¾ä¿¡æ¯åŒæ—¶å‘é€æ›´æ–°è¯·æ±‚
-æ–°å»ºå¯¼å›¾å‰¯æœ¬å­˜å‚¨ä¸‹è½½æ›´æ–°ï¼Œä¿è¯çŸ­æ—¶é—´å®Œæˆç²˜è´´
-å¯¼å›¾æ›´æ–°æœ‰æƒé™æ§åˆ¶ï¼Œåˆ†å—æ›´æ–°æœ‰ç”³è¯·æœºåˆ¶ï¼Œå…³ç³»æ›´æ–°ä¸å½±å“æŒ‡é’ˆ
-æ•…ç¬¬äºŒçº¿ç¨‹ä¸ä¼šå‘ç”Ÿç¼–è¾‘å†²çª
+µÚ¶şÏß³Ì£º
+Ê±ÖÓÖĞ¶Ï¿ØÖÆ0.2s
+¶¨Ê±Ïò·şÎñÆ÷ÉêÇë¸üĞÂ
+¶ÔÓÚÖ÷ÓÃ»§£¬µ±±êÖ¾Î»ÖÃÎ»Ê±ÉÏ´«µ¼Í¼ĞÅÏ¢Í¬Ê±·¢ËÍ¸üĞÂÇëÇó
+ĞÂ½¨µ¼Í¼¸±±¾´æ´¢ÏÂÔØ¸üĞÂ£¬±£Ö¤¶ÌÊ±¼äÍê³ÉÕ³Ìù
+µ¼Í¼¸üĞÂÓĞÈ¨ÏŞ¿ØÖÆ£¬·Ö¿é¸üĞÂÓĞÉêÇë»úÖÆ£¬¹ØÏµ¸üĞÂ²»Ó°ÏìÖ¸Õë
+¹ÊµÚ¶şÏß³Ì²»»á·¢Éú±à¼­³åÍ»
 
-çº¿ç¨‹åŒæ­¥ï¼š
-è®¾ç½®ä¸¤ä¸ªä¸´ç•ŒåŒºï¼Œç½‘ç»œä¸´ç•ŒåŒºå’Œæ•°æ®ä¸´ç•ŒåŒº
-ç½‘ç»œä¸´ç•ŒåŒºé€»è¾‘ä¸ŠåŒ…å«æ•°æ®ä¸´ç•ŒåŒº
-å¯¹äºè®¡æ—¶å™¨çº¿ç¨‹ï¼Œé¡ºåºä¸ºï¼š
+Ïß³ÌÍ¬²½£º
+ÉèÖÃÁ½¸öÁÙ½çÇø£¬ÍøÂçÁÙ½çÇøºÍÊı¾İÁÙ½çÇø
+ÍøÂçÁÙ½çÇøÂß¼­ÉÏ°üº¬Êı¾İÁÙ½çÇø
+¶ÔÓÚ¼ÆÊ±Æ÷Ïß³Ì£¬Ë³ĞòÎª£º
 {
-ç½‘ç»œä¸´ç•ŒåŒºé”å®š
-æ•°æ®ä¸´ç•ŒåŒºé”å®š
-ç½‘ç»œè¡Œä¸º
-æ•°æ®ä¸´ç•ŒåŒºè§£é”
-ç½‘ç»œä¸´ç•ŒåŒºè§£é”
-æ•°æ®ä¸´ç•ŒåŒºé”å®š
-æ•°æ®è¡Œä¸º
-æ•°æ®ä¸´ç•ŒåŒºè§£é”
+ÍøÂçÁÙ½çÇøËø¶¨
+Êı¾İÁÙ½çÇøËø¶¨
+ÍøÂçĞĞÎª
+Êı¾İÁÙ½çÇø½âËø
+ÍøÂçÁÙ½çÇø½âËø
+Êı¾İÁÙ½çÇøËø¶¨
+Êı¾İĞĞÎª
+Êı¾İÁÙ½çÇø½âËø
 }
-æ•…ä¸»çº¿ç¨‹éœ€è¦ç½‘ç»œè°ƒç”¨æ—¶ï¼Œä½¿ç”¨ç½‘ç»œä¸´ç•ŒåŒº
-éœ€è¦æ•°æ®æ“ä½œæ—¶ï¼Œä½¿ç”¨æ•°æ®ä¸´ç•ŒåŒº
+¹ÊÖ÷Ïß³ÌĞèÒªÍøÂçµ÷ÓÃÊ±£¬Ê¹ÓÃÍøÂçÁÙ½çÇø
+ĞèÒªÊı¾İ²Ù×÷Ê±£¬Ê¹ÓÃÊı¾İÁÙ½çÇø
 
 */
 
@@ -63,112 +63,112 @@
 
 class EditMindDlg : public CDialogEx
 {
-	//å‹å…ƒ
-	friend class COurMindClientDlg;//çˆ¶ç±»
+	//ÓÑÔª
+	friend class COurMindClientDlg;//¸¸Àà
 
 
 	DECLARE_DYNAMIC(EditMindDlg)
 
 public:
-	EditMindDlg(const bool EditLimit, CWnd* pParent=NULL);   // æ ‡å‡†æ„é€ å‡½æ•°
+	EditMindDlg(const bool EditLimit, CWnd* pParent=NULL);   // ±ê×¼¹¹Ôìº¯Êı
 	virtual ~EditMindDlg();
 
-// å¯¹è¯æ¡†æ•°æ®
+// ¶Ô»°¿òÊı¾İ
 	enum { IDD = IDD_EDITMINDDLG };
 
-	//å˜é‡
+	//±äÁ¿
 public:
-	//æ€ç»´å¯¼å›¾ä¸»ä½“å˜é‡
-	MindNode TheMind;//å½“å‰æ€ç»´å¯¼å›¾ï¼Œä¸ºå¤åˆ¶è€Œéå¼•ç”¨
-	const bool EditLimit;//ç¼–è¾‘é™åˆ¶
-	ListTemplet<class OperateNode> OperateList;//æ¥æ”¶æ“ä½œé“¾è¡¨
+	//Ë¼Î¬µ¼Í¼Ö÷Ìå±äÁ¿
+	MindNode TheMind;//µ±Ç°Ë¼Î¬µ¼Í¼£¬Îª¸´ÖÆ¶ø·ÇÒıÓÃ
+	const bool EditLimit;//±à¼­ÏŞÖÆ
+	ListTemplet<class OperateNode> OperateList;//½ÓÊÕ²Ù×÷Á´±í
 
-	//æ€ç»´å¯¼å›¾ç»˜å›¾å˜é‡
-	CRect rectEditArea;//ç¼–è¾‘åŒºåŸŸ
-	CRect rectBackArea;//è¦†ç›–åŒºåŸŸ
-	CPoint CornerPoint;//è§’ç‚¹åæ ‡
-	int ZoomLevel;//ç¼©æ”¾ç­‰çº§
-	const static double ZoomSize[];//ç¼©æ”¾å°ºå¯¸
-	const static int MaxZoomLevel;//æœ€å¤§ç¼©æ”¾ç­‰çº§
-	const static int DefaultZoom;//é»˜è®¤ç¼©æ”¾ç­‰çº§
+	//Ë¼Î¬µ¼Í¼»æÍ¼±äÁ¿
+	CRect rectEditArea;//±à¼­ÇøÓò
+	CRect rectBackArea;//¸²¸ÇÇøÓò
+	CPoint CornerPoint;//½Çµã×ø±ê
+	int ZoomLevel;//Ëõ·ÅµÈ¼¶
+	const static double ZoomSize[];//Ëõ·Å³ß´ç
+	const static int MaxZoomLevel;//×î´óËõ·ÅµÈ¼¶
+	const static int DefaultZoom;//Ä¬ÈÏËõ·ÅµÈ¼¶
 
-	//æ€ç»´å¯¼å›¾çŠ¶æ€å˜é‡
-	bool EditBlockStatus;//ç¼–è¾‘èŠ‚ç‚¹çŠ¶æ€
-	BlockNode *pEditBlock;//ç¼–è¾‘èŠ‚ç‚¹
-	bool LBottonStatus;//å·¦é”®ç‚¹å‡»çŠ¶æ€
-	CPoint LBottonPoint;//å·¦é”®ç‚¹å‡»åæ ‡
-	double LBottonZoom;//å³é”®ç‚¹å‡»ç¼©æ”¾è®°å½•
-	bool RBottonStatus;//å³é”®ç‚¹å‡»çŠ¶æ€
-	CPoint RBottonPoint;//å³é”®ç‚¹å‡»åæ ‡
-	bool ChooseLineBlock;//é€‰æ‹©è¿çº¿åˆ†å—çŠ¶æ€
-	bool ChooseLockBlock;//é€‰æ‹©é”å®šåˆ†å—çŠ¶æ€
-	bool ChooseUnlockBlock;//é€‰æ‹©è§£é”åˆ†å—çŠ¶æ€
+	//Ë¼Î¬µ¼Í¼×´Ì¬±äÁ¿
+	bool EditBlockStatus;//±à¼­½Úµã×´Ì¬
+	BlockNode *pEditBlock;//±à¼­½Úµã
+	bool LBottonStatus;//×ó¼üµã»÷×´Ì¬
+	CPoint LBottonPoint;//×ó¼üµã»÷×ø±ê
+	double LBottonZoom;//ÓÒ¼üµã»÷Ëõ·Å¼ÇÂ¼
+	bool RBottonStatus;//ÓÒ¼üµã»÷×´Ì¬
+	CPoint RBottonPoint;//ÓÒ¼üµã»÷×ø±ê
+	bool ChooseLineBlock;//Ñ¡ÔñÁ¬Ïß·Ö¿é×´Ì¬
+	bool ChooseLockBlock;//Ñ¡ÔñËø¶¨·Ö¿é×´Ì¬
+	bool ChooseUnlockBlock;//Ñ¡Ôñ½âËø·Ö¿é×´Ì¬
 
-	//çº¿ç¨‹åŒæ­¥
-	CWinThread *pThread;//åŒæ­¥å·¥ä½œè€…çº¿ç¨‹
-	class TimerDlg *pTimerDlg;//å¼€å¯çš„åŒæ­¥çº¿ç¨‹çª—å£
-	CCriticalSection csNetUpdata;//ç½‘ç»œæ›´æ–°ä¸´ç•ŒåŒº
-	CCriticalSection csDataUpdata;//æ•°æ®æ›´æ–°ä¸´ç•ŒåŒº
+	//Ïß³ÌÍ¬²½
+	CWinThread *pThread;//Í¬²½¹¤×÷ÕßÏß³Ì
+	class TimerDlg *pTimerDlg;//¿ªÆôµÄÍ¬²½Ïß³Ì´°¿Ú
+	CCriticalSection csNetUpdata;//ÍøÂç¸üĞÂÁÙ½çÇø
+	CCriticalSection csDataUpdata;//Êı¾İ¸üĞÂÁÙ½çÇø
 
-	//æ§ä»¶æŒ‡é’ˆåŠå…¶è¾…åŠ©å˜é‡
-	CEdit *pEditMindName;//å¯¼å›¾åå­—ç¼–è¾‘æ¡†
-	CString LastMindName;//å¯¼å›¾åå­—è¾…åŠ©å˜é‡
-	CListBox *pListShareList;//å…±äº«ç”¨æˆ·åˆ—è¡¨æ¡†
-	CEdit *pEditAddShare;//æ·»åŠ å…±äº«ç”¨æˆ·ç¼–è¾‘æ¡†
-	CStatic *pStaticEditNum;//ç¼–è¾‘äººæ•°é™æ€æ¡†
-	CStatic *pStaticShareNum;//å…±äº«äººæ•°é™æ€æ¡†
-	CButton *pCheckReadOnly;//åªè¯»å¤é€‰æŒ‰é’®
-	CButton *pCheckSetWith;//è®¾ç½®è¿å¸¦å¤é€‰æŒ‰é’®
-	bool SetWith;//è®¾ç½®è¿å¸¦çŠ¶æ€å˜é‡
-	CEdit *pEditBlockText;//åˆ†å—æ–‡å­—ç¼–è¾‘æ¡†
-	CString LastBlockText;//åˆ†å—æ–‡å­—è¾…åŠ©å˜é‡
-	CStatic *pStaticLock;//åˆ†å—é”å®šé™æ€æ¡†
-	CEdit *pEditRed;//è®¾ç½®çº¢è‰²ç¼–è¾‘æ¡†
-	CEdit *pEditGreen;//è®¾ç½®ç»¿è‰²ç¼–è¾‘æ¡†
-	CEdit *pEditBlue;//è®¾ç½®è“è‰²ç¼–è¾‘æ¡†
-	bool ColorAcceptFlag;//é¢œè‰²æ¥æ”¶å¤–éƒ¨å˜åŒ–æ ‡å¿—
-	CSliderCtrl *pSliderRed;//è®¾ç½®çº¢è‰²æ»‘åŠ¨æ¡†
-	CSliderCtrl *pSliderGreen;//è®¾ç½®ç»¿è‰²æ»‘åŠ¨æ¡†
-	CSliderCtrl *pSliderBlue;//è®¾ç½®è“è‰²æ»‘åŠ¨æ¡†
-	CComboBox *pComboShape;//é€‰æ‹©å½¢çŠ¶ç»„åˆæ¡†
-	CStatic *pStaticSelLineBlock;//é€‰æ‹©è¿æ¥åˆ†å—é™æ€æ¡†
-	CStatic *pStaticSelLockBlock;//é€‰æ‹©é”å®šåˆ†å—é™æ€æ¡†
-	CComboBox *pComboLineDir;//é€‰æ‹©æ–¹å‘ç»„åˆæ¡†
+	//¿Ø¼şÖ¸Õë¼°Æä¸¨Öú±äÁ¿
+	CEdit *pEditMindName;//µ¼Í¼Ãû×Ö±à¼­¿ò
+	CString LastMindName;//µ¼Í¼Ãû×Ö¸¨Öú±äÁ¿
+	CListBox *pListShareList;//¹²ÏíÓÃ»§ÁĞ±í¿ò
+	CEdit *pEditAddShare;//Ìí¼Ó¹²ÏíÓÃ»§±à¼­¿ò
+	CStatic *pStaticEditNum;//±à¼­ÈËÊı¾²Ì¬¿ò
+	CStatic *pStaticShareNum;//¹²ÏíÈËÊı¾²Ì¬¿ò
+	CButton *pCheckReadOnly;//Ö»¶Á¸´Ñ¡°´Å¥
+	CButton *pCheckSetWith;//ÉèÖÃÁ¬´ø¸´Ñ¡°´Å¥
+	bool SetWith;//ÉèÖÃÁ¬´ø×´Ì¬±äÁ¿
+	CEdit *pEditBlockText;//·Ö¿éÎÄ×Ö±à¼­¿ò
+	CString LastBlockText;//·Ö¿éÎÄ×Ö¸¨Öú±äÁ¿
+	CStatic *pStaticLock;//·Ö¿éËø¶¨¾²Ì¬¿ò
+	CEdit *pEditRed;//ÉèÖÃºìÉ«±à¼­¿ò
+	CEdit *pEditGreen;//ÉèÖÃÂÌÉ«±à¼­¿ò
+	CEdit *pEditBlue;//ÉèÖÃÀ¶É«±à¼­¿ò
+	bool ColorAcceptFlag;//ÑÕÉ«½ÓÊÕÍâ²¿±ä»¯±êÖ¾
+	CSliderCtrl *pSliderRed;//ÉèÖÃºìÉ«»¬¶¯¿ò
+	CSliderCtrl *pSliderGreen;//ÉèÖÃÂÌÉ«»¬¶¯¿ò
+	CSliderCtrl *pSliderBlue;//ÉèÖÃÀ¶É«»¬¶¯¿ò
+	CComboBox *pComboShape;//Ñ¡ÔñĞÎ×´×éºÏ¿ò
+	CStatic *pStaticSelLineBlock;//Ñ¡ÔñÁ¬½Ó·Ö¿é¾²Ì¬¿ò
+	CStatic *pStaticSelLockBlock;//Ñ¡ÔñËø¶¨·Ö¿é¾²Ì¬¿ò
+	CComboBox *pComboLineDir;//Ñ¡Ôñ·½Ïò×éºÏ¿ò
 
-	//åˆ—ä¸¾æ§ä»¶ID
+	//ÁĞ¾Ù¿Ø¼şID
 protected:
-	const static int MindFreeItem[];//æ€ç»´å¯¼å›¾æ— é™åˆ¶æ§ä»¶
-	const static int MindLimitItem[];//æ€ç»´å¯¼å›¾é™åˆ¶æ§ä»¶
-	const static int BlockFreeItem[];//åˆ†å—æ— é™åˆ¶æ§ä»¶
-	const static int BlockLimitItem[];//åˆ†å—é™åˆ¶æ§ä»¶
-	const static int AlwaysHideItem[];//å¸¸éšè—æ§ä»¶
-	CWnd *pMindFreeItem[100];//æ€ç»´å¯¼å›¾æ— é™åˆ¶æ§ä»¶æŒ‡é’ˆ
-	CWnd *pMindLimitItem[100];//æ€ç»´å¯¼å›¾é™åˆ¶æ§ä»¶æŒ‡é’ˆ
-	CWnd *pBlockFreeItem[100];//åˆ†å—æ— é™åˆ¶æ§ä»¶æŒ‡é’ˆ
-	CWnd *pBlockLimitItem[100];//åˆ†å—é™åˆ¶æ§ä»¶æŒ‡é’ˆ
-	CWnd *pAlwaysHideItem[100];//å¸¸éšè—æ§ä»¶æŒ‡é’ˆ
+	const static int MindFreeItem[];//Ë¼Î¬µ¼Í¼ÎŞÏŞÖÆ¿Ø¼ş
+	const static int MindLimitItem[];//Ë¼Î¬µ¼Í¼ÏŞÖÆ¿Ø¼ş
+	const static int BlockFreeItem[];//·Ö¿éÎŞÏŞÖÆ¿Ø¼ş
+	const static int BlockLimitItem[];//·Ö¿éÏŞÖÆ¿Ø¼ş
+	const static int AlwaysHideItem[];//³£Òş²Ø¿Ø¼ş
+	CWnd *pMindFreeItem[100];//Ë¼Î¬µ¼Í¼ÎŞÏŞÖÆ¿Ø¼şÖ¸Õë
+	CWnd *pMindLimitItem[100];//Ë¼Î¬µ¼Í¼ÏŞÖÆ¿Ø¼şÖ¸Õë
+	CWnd *pBlockFreeItem[100];//·Ö¿éÎŞÏŞÖÆ¿Ø¼şÖ¸Õë
+	CWnd *pBlockLimitItem[100];//·Ö¿éÏŞÖÆ¿Ø¼şÖ¸Õë
+	CWnd *pAlwaysHideItem[100];//³£Òş²Ø¿Ø¼şÖ¸Õë
 
-	//æ–¹æ³•
+	//·½·¨
 protected:
-	static UINT ThreadFunc(LPVOID pParam);//åŒæ­¥å·¥ä½œè€…çº¿ç¨‹å›è°ƒå‡½æ•°
-	bool NameRule(CString &string);//æ£€æŸ¥å‘½åè§„åˆ™
-	int CStringTo255(CString &string);//å­—ç¬¦ä¸²å‹ç¼©æ•°å­—åˆ°255
-	void RefreshShareList(bool KeepSel);//åˆ·æ–°å…±äº«ç”¨æˆ·åˆ—è¡¨æ¡†æ˜¾ç¤º
-	void PaintMind(CDC *pdc);//æ€ç»´å¯¼å›¾ç»˜å›¾
-	void PaintBlock(CDC *pdc, BlockNode *pBlock, CBrush &brush, CPen &pen);//æ€ç»´å¯¼å›¾åˆ†å—é€’å½’ç»˜å›¾
-	void PaintLine(CDC *pdc, BlockNode *pBlock);//æ€ç»´å¯¼å›¾è¿çº¿é€’å½’ç»˜å›¾
-	void EditMindDlg::PaintShape(CDC *pdc, enumShape Shape, CRect &rect);//ç»˜åˆ¶å½¢çŠ¶
-	BlockNode *ChoiseBlock(BlockNode *pBlock, CPoint &point);//æ€ç»´å¯¼å›¾é€’å½’é€‰æ‹©æ‰€åœ¨åˆ†å—
-	bool JustShape(enumShape Shape, CRect &rectSize, CPoint &JudgePoint);//åˆ¤æ–­å½¢çŠ¶
-	CPoint ImageToReal(const CPoint &point);//å›¾åƒåæ ‡è½¬çœŸå®åæ ‡
-	CPoint RealToImage(const CPoint &point);//çœŸå®åæ ‡è½¬å›¾åƒåæ ‡
-	void TurnBlockStatus(BlockNode *pBlock);//è½¬æ¢åˆ†å—ç¼–è¾‘çŠ¶æ€
-	void TurnMindStatus();//è½¬æ¢å¯¼å›¾ç¼–è¾‘çŠ¶æ€
-	void ProcessKeyDown(WPARAM Key);//é”®ç›˜æ¶ˆæ¯å¤„ç†
-	void Exit();//é€€å‡ºçª—å£
+	static UINT ThreadFunc(LPVOID pParam);//Í¬²½¹¤×÷ÕßÏß³Ì»Øµ÷º¯Êı
+	bool NameRule(CString &string);//¼ì²éÃüÃû¹æÔò
+	int CStringTo255(CString &string);//×Ö·û´®Ñ¹ËõÊı×Öµ½255
+	void RefreshShareList(bool KeepSel);//Ë¢ĞÂ¹²ÏíÓÃ»§ÁĞ±í¿òÏÔÊ¾
+	void PaintMind(CDC *pdc);//Ë¼Î¬µ¼Í¼»æÍ¼
+	void PaintBlock(CDC *pdc, BlockNode *pBlock, CBrush &brush, CPen &pen);//Ë¼Î¬µ¼Í¼·Ö¿éµİ¹é»æÍ¼
+	void PaintLine(CDC *pdc, BlockNode *pBlock);//Ë¼Î¬µ¼Í¼Á¬Ïßµİ¹é»æÍ¼
+	void EditMindDlg::PaintShape(CDC *pdc, enumShape Shape, CRect &rect);//»æÖÆĞÎ×´
+	BlockNode *ChoiseBlock(BlockNode *pBlock, CPoint &point);//Ë¼Î¬µ¼Í¼µİ¹éÑ¡ÔñËùÔÚ·Ö¿é
+	bool JustShape(enumShape Shape, CRect &rectSize, CPoint &JudgePoint);//ÅĞ¶ÏĞÎ×´
+	CPoint ImageToReal(const CPoint &point);//Í¼Ïñ×ø±ê×ªÕæÊµ×ø±ê
+	CPoint RealToImage(const CPoint &point);//ÕæÊµ×ø±ê×ªÍ¼Ïñ×ø±ê
+	void TurnBlockStatus(BlockNode *pBlock);//×ª»»·Ö¿é±à¼­×´Ì¬
+	void TurnMindStatus();//×ª»»µ¼Í¼±à¼­×´Ì¬
+	void ProcessKeyDown(WPARAM Key);//¼üÅÌÏûÏ¢´¦Àí
+	void Exit();//ÍË³ö´°¿Ú
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
 
 	DECLARE_MESSAGE_MAP()
 public:
