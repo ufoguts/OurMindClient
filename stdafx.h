@@ -39,6 +39,7 @@
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
 #include <math.h>
+#include <cassert>
 
 
 //工程基本文件
